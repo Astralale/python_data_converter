@@ -1,0 +1,9 @@
+- age: 30
+  city: New York
+  name: John
+- age: 25
+  city: Paris
+  name: Jane
+- age: 22
+  city: London
+  name: Doe
