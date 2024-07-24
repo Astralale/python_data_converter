@@ -26,12 +26,13 @@ def calculate_stats(data):
                 "max_length": max(lengths),
                 "mean_length": sum(lengths) / len(lengths)
             }
+        elif isinstance(values[0], str):
+            lengths = [len(v) for v in values]
+            stats[key] = {
+                "min_length": min(lengths),
+                "max_length": max(lengths),
+                "mean_length": sum(lengths) / len(lengths)
+            }
 
     return stats
 
-
-def display_stats(stats):
-    for key, stat in stats.items():
-        print(f"Stats for {key}:")
-        for stat_key, stat_value in stat.items():
-            print(f"  {stat_key}: {stat_value}")

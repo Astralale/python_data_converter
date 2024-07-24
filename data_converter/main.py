@@ -3,7 +3,7 @@ import os
 import tkinter as tk
 from tkinter import filedialog, messagebox
 from loader import load_csv, save_csv, load_json, save_json, load_xml, save_xml, load_yaml, save_yaml
-from stats import calculate_stats, display_stats
+from stats import calculate_stats
 from filter import filter_data, advanced_filter_data
 from sorter import sort_data, sort_data_multiple
 
@@ -70,7 +70,7 @@ class DataConverterApp:
         self.sort_button.grid(row=5, column=2, padx=10, pady=10)
 
         # Sort Multiple Data
-        self.sort_multiple_label = tk.Label(root, text="Sort Keys (comma separated)")
+        self.sort_multiple_label = tk.Label(root, text="Sort Keys")
         self.sort_multiple_label.grid(row=6, column=0, padx=10, pady=10)
 
         self.sort_multiple_entry = tk.Entry(root)
